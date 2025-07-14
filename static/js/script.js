@@ -3,7 +3,8 @@
 const loginform = document.getElementById("loginform")
 
 loginform.addEventListener('submit',(e) =>{
-    e.preventDefault()
+    
+    
 
     console.log("oi")
     let name = document.getElementById("loginname")
@@ -12,6 +13,8 @@ loginform.addEventListener('submit',(e) =>{
     console.log(email)
     let inputs = [name,email]
     console.log(inputs)
+    
+
 
     validation = (wrong) => {
         wrong = wrong.slice(5)
@@ -58,7 +61,9 @@ loginform.addEventListener('submit',(e) =>{
 
     check()
 
-
-
+    console.log(document.getElementsByClassName("none").length != 2)
+    if (document.getElementsByClassName("none").length != 2){
+        e.preventDefault()
+    }
 
 })

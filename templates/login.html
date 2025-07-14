@@ -13,9 +13,9 @@
         <div class="center wrapper">
             <div class="form__container">
 
-                <form action="" id="loginform">
+                <form action="{{ url_for('signin') }}" method="post" id="loginform">
                     <div class="nameform">
-                        <input type="text" id="loginname" placeholder="Nome">
+                        <input type="text" name="nameform" id="loginname" placeholder="Nome">
                         <p id="namevalidate"></p>
                     </div>
                     
