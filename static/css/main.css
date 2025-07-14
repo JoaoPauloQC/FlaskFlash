@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+}
+
 .login__container {
     min-height: 100vh;
     background-color: #0b0b0b;
@@ -66,4 +70,37 @@
 
 .none{
     display: none;
+}
+
+.home__container{
+    min-height: 100vh;
+    background-color: #0b0b0b;
+    color: #fff;
+}
+
+.home__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Poppins;
+}
+
+.home__content h1{
+    margin: 0;
+    padding: 0;
+}
+
+.flashes {
+    background-color: #0b0b0b;
+    color: #fff;
+    font-family: Poppins;
+}
+
+.flashes p{
+    padding: 0;
+    margin: 0;
 }

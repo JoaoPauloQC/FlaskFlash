@@ -36,6 +36,7 @@ loginform.addEventListener('submit',(e) =>{
     
     const byeOnScreen = (wrong) => {
         wrong = wrong.slice(5)
+        
         let toRemove = document.getElementById(wrong + "validate")
         console.log("tem? " + toRemove.classList.contains("none") )
         if (toRemove.classList.contains("none") === false){

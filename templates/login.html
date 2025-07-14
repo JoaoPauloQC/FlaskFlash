@@ -20,8 +20,8 @@
                     </div>
                     
                     <div class="emailform">
-                    <input type="email" id="loginemail" placeholder="exemplocriativo@gmail.com">
-                    <p id="emailvalidate" class="none"></p>
+                        <input type="email" id="loginemail" name="emailform" placeholder="exemplocriativo@gmail.com">
+                        <p id="emailvalidate" class="none"></p>
                     </div>
                     <button> Entrar </button>
                     
@@ -29,6 +29,13 @@
 
             </div>
         </div>
+        {% with messages = get_flashed_messages()  %}
+        {% if messages %}
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
 
     </main>
     <script src="{{ url_for('static' , filename='js/script.js') }}"></script>
