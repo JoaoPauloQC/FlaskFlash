@@ -47,13 +47,28 @@ loginform.addEventListener('submit',(e) =>{
     check = () => {
         console.log("na checagem")
         for (let i of inputs) {
-            console.log(i)
+            console.log(i.id)
             console.log(i === "")
-            if (i.value === ""){
+            if (i.id !== "loginemail" ){
+                console.log("to no if e sou" + i.id)
+                if (i.value === ""){
                 validation(i.id)
+                }
+                else{
+                byeOnScreen(i.id)
+                }
+
             }
             else{
-                byeOnScreen(i.id)
+                console.log("else email e ")
+                console.log(i.value)
+                
+                if (!i.value.contains("@gmail.com")){
+                    validation(i.id)
+                    }
+                    else{
+                    byeOnScreen(i.id)
+                    }
             }
 
         }
@@ -63,6 +78,8 @@ loginform.addEventListener('submit',(e) =>{
     check()
 
     console.log(document.getElementsByClassName("none").length != 2)
+    console.log(document.getElementsByClassName("none").length )
+
     if (document.getElementsByClassName("none").length != 2){
         e.preventDefault()
     }
